@@ -7,11 +7,17 @@
 
 (struct title (t) #:mutable)
 
+(struct quote (q) #:mutable)
+
 (define title-header
   (list (title "Chief HTML Officer")
         (title "Remote Funnel Marketing Ninja")
         (title "Content Hero")
-        (title "GIF Librarian")))
+        (title "GIF Librarian")
+        (title "Galactic Viceroy of Research Excellence")))
+
+(define lao-tzu-quotes
+  (list (quote "Be the chief but never the lord.")))
 
 (define (random-title titles)
   (define index (random (length titles)))
