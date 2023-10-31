@@ -15,7 +15,8 @@ RUN raco pkg config --set catalogs \
     "https://pkg-build.racket-lang.org/server/built/catalog/" \
     "https://pkgs.racket-lang.org" \
     "https://planet-compats.racket-lang.org"
-RUN raco pkg install --auto compiler-lib
+RUN raco pkg install --auto compiler-lib && \
+    raco pkg install --auto taino
 RUN raco exe api.rkt
 
 FROM --platform=linux/amd64 debian:stable-slim

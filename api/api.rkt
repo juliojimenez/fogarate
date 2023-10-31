@@ -14,10 +14,12 @@
         (title "Remote Funnel Marketing Ninja")
         (title "Content Hero")
         (title "GIF Librarian")
-        (title "Galactic Viceroy of Research Excellence")))
+        (title "Galactic Viceroy of Research Excellence")
+        (title "Innovation Sherpa")))
 
 (define lao-tzu-quotes
-  (list (quote "Be the chief but never the lord.")))
+  (list (quote "Be the chief but never the lord.")
+        (quote "Because of a great love, one is courageous.")))
 
 (define (random-title titles)
   (define index (random (length titles)))
