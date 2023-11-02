@@ -20,7 +20,8 @@
 (define lao-tzu-quotes
   (list (wise-quote "Be the chief but never the lord.")
         (wise-quote "Because of a great love, one is courageous.")
-        (wise-quote "Simulated disorder postulates perfect discipline; simulated fear postulates courage; simulated weakness postulates strength.")))
+        (wise-quote "Simulated disorder postulates perfect discipline; simulated fear postulates courage; simulated weakness postulates strength.")
+        (wise-quote "A scholar who cherishes the love of comfort is not fit to be deemed a scholar.")))
 
 (define (random-title titles)
   (define index (random (length titles)))
@@ -32,7 +33,12 @@
   (define selected-quote (list-ref quotes index))
   (wise-quote-q selected-quote))
 
-(define (resp/text t [c 200] [h (list (make-header #"Content-Type" #"text/plain;charset=us-ascii"))])
+(define (resp/text #:text t 
+                   #:code [c 200]
+                   #:headers [h (list (make-header 
+                                        #"Content-Type" #"text/plain;charset=us-ascii")
+                                      (make-header
+                                        #"Access-Control-Allow-Origin" #"https://julio.sh"))])
   (response/output
     (λ (op) (write-bytes t op))
     #:code c
@@ -48,15 +54,12 @@
       [("lao-tzu") get-lao-tzu]))
 
 (define (health req)
-  ; (print (get-uri-resource req))
   (resp/text #"OK"))
 
 (define (get-title req)
-  ; (print (get-uri-resource req))
   (resp/text (string->bytes/utf-8 (random-title title-header))))
 
 (define (get-lao-tzu req)
-  ; (print (get-uri-resource req))
   (resp/text (string->bytes/utf-8 (random-quote lao-tzu-quotes))))
 
 (serve/servlet
