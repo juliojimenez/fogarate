@@ -38,7 +38,7 @@
                    #:headers [h (list (make-header 
                                         #"Content-Type" #"text/plain;charset=us-ascii")
                                       (make-header
-                                        #"Access-Control-Allow-Origin" #"https://julio.sh"))])
+                                        #"Access-Control-Allow-Origin" #"*"))])
   (response/output
     (λ (op) (write-bytes t op))
     #:code c
