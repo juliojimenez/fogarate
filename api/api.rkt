@@ -66,11 +66,11 @@
     #:code 200
     #:message #"OK"
     #:header (list
-               (make-header "Access-Control-Allow-Origin" "*")
-               (make-header "Access-Control-Allow-Methods" "GET, POST, PUT, DELETE, OPTIONS")
-               (make-header "Access-Control-Allow-Headers" "Content-Type, Authorization")
-               (make-header "Access-Control-Max-Age" "86400")
-               (make-header "Content-Length" "0"))))
+               (make-header #"Access-Control-Allow-Origin" #"*")
+               (make-header #"Access-Control-Allow-Methods" #"GET, POST, PUT, DELETE, OPTIONS")
+               (make-header #"Access-Control-Allow-Headers" #"Content-Type, Authorization")
+               (make-header #"Access-Control-Max-Age" #"86400")
+               (make-header #"Content-Length" #"0"))))
 
 (define (resp/text #:request r
                    #:text t 
