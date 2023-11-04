@@ -76,7 +76,7 @@
                    #:text t 
                    #:code [c 200]
                    #:headers [h (list (make-header 
-                                        #"Content-Type" #"text/plain;charset=us-ascii")
+                                        #"Content-Type" #"text/html;charset=utf-8")
                                       (make-header
                                         #"Access-Control-Allow-Origin" #"*")
                                       (make-header #"Access-Control-Allow-Methods" #"GET, POST, PUT, DELETE, OPTIONS")
