@@ -68,7 +68,7 @@
                                         #"Content-Type" #"text/plain;charset=us-ascii")
                                       (make-header
                                         #"Access-Control-Allow-Origin" #"*"))])
-  (match (request-method request)
+  (match (request-method r)
     [(or "GET" "POST" "PUT" "DELETE")
       (response/output
         (λ (op) (write-bytes t op))
