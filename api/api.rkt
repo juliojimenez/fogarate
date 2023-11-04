@@ -78,7 +78,12 @@
                    #:headers [h (list (make-header 
                                         #"Content-Type" #"text/plain;charset=us-ascii")
                                       (make-header
-                                        #"Access-Control-Allow-Origin" #"*"))])
+                                        #"Access-Control-Allow-Origin" #"*")
+                                      (make-header #"Access-Control-Allow-Methods" #"GET, POST, PUT, DELETE, OPTIONS")
+                                      (make-header 
+                                        #"Access-Control-Allow-Headers" #"Content-Type, Authorization")
+                                      (make-header 
+                                        #"Access-Control-Max-Age" #"86400"))])
   (match (request-method r)
     [(or #"GET" #"POST" #"PUT" #"DELETE")
       (response/output
