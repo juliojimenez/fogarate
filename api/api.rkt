@@ -1,13 +1,27 @@
 #lang racket
 
+;; fogaraté API
+
+;; -------
+;; imports
+;; -------
+
 (require
-  web-server/dispatch
-  web-server/servlet-env
-  web-server/http)
+  web-server/dispatch     ;; Dispatch Rules
+  web-server/servlet-env  ;; Runs the servlet
+  web-server/http)        ;; Responses and Requests
+
+;; -----------
+;; data models
+;; -----------
 
 (struct title (t) #:mutable)
-
 (struct wise-quote (q) #:mutable)
+
+;; -----------------------------
+;; stuff that will eventually be
+;; replaced with ClickHouse
+;; -----------------------------
 
 (define title-header
   (list (title "Chief HTML Officer")
@@ -21,7 +35,10 @@
   (list (wise-quote "Be the chief but never the lord.")
         (wise-quote "Because of a great love, one is courageous.")
         (wise-quote "Simulated disorder postulates perfect discipline; simulated fear postulates courage; simulated weakness postulates strength.")
-        (wise-quote "A scholar who cherishes the love of comfort is not fit to be deemed a scholar.")))
+        (wise-quote "A scholar who cherishes the love of comfort is not fit to be deemed a scholar.")
+        (wise-quote "If the Great Way perishes there will morality and duty. When cleverness and knowledge arise great lies will flourish. When relatives fall out with one another there will be filial duty and love. When states are in confusion there will be faithful servants.")
+        (wise-quote "To know yet to think that one does not know is best; Not to know yet to think that one knows will lead to difficulty.")))
+
 
 (define (random-title titles)
   (define index (random (length titles)))
@@ -33,34 +50,50 @@
   (define selected-quote (list-ref quotes index))
   (wise-quote-q selected-quote))
 
-(define (resp/text #:text t 
+(define (handle-options req)
+  (response/full
+    #:code 200
+    #:message #"OK"
+    #:header (list
+               (make-header "Access-Control-Allow-Origin" "*")
+               (make-header "Access-Control-Allow-Methods" "GET, POST, PUT, DELETE, OPTIONS")
+               (make-header "Access-Control-Allow-Headers" "Content-Type, Authorization")
+               (make-header "Access-Control-Max-Age" "86400")
+               (make-header "Content-Length" "0"))))
+
+(define (resp/text #:request r
+                   #:text t 
                    #:code [c 200]
                    #:headers [h (list (make-header 
                                         #"Content-Type" #"text/plain;charset=us-ascii")
                                       (make-header
                                         #"Access-Control-Allow-Origin" #"*"))])
-  (response/output
-    (λ (op) (write-bytes t op))
-    #:code c
-    #:message #"OK"
-    #:seconds (current-seconds)
-    #:mime-type TEXT/HTML-MIME-TYPE
-    #:headers h))
+  (match (request-method request)
+    [(or "GET" "POST" "PUT" "DELETE")
+      (response/output
+        (λ (op) (write-bytes t op))
+          #:code c
+          #:message #"OK"
+          #:seconds (current-seconds)
+          #:mime-type TEXT/HTML-MIME-TYPE
+          #:headers h)]
+    ["OPTIONS"
+      (handle-options r)]))
+
+(define (health req)
+  (resp/text #:request req #:text #"OK"))
+
+(define (get-title req)
+  (resp/text #:request req #:text (string->bytes/utf-8 (random-title title-header))))
+
+(define (get-lao-tzu req)
+  (resp/text #:request req #:text (string->bytes/utf-8 (random-quote lao-tzu-quotes))))
 
 (define-values (api-dispatch api-url)
     (dispatch-rules
       [("") health]
       [("title") get-title]
       [("lao-tzu") get-lao-tzu]))
-
-(define (health req)
-  (resp/text #"OK"))
-
-(define (get-title req)
-  (resp/text (string->bytes/utf-8 (random-title title-header))))
-
-(define (get-lao-tzu req)
-  (resp/text (string->bytes/utf-8 (random-quote lao-tzu-quotes))))
 
 (serve/servlet
   api-dispatch
