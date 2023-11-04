@@ -24,6 +24,7 @@
 ;; -----------------------------
 
 (define title-header
+  ; fun job titles
   (list (title "Chief HTML Officer")
         (title "Remote Funnel Marketing Ninja")
         (title "Content Hero")
@@ -32,6 +33,7 @@
         (title "Innovation Sherpa")))
 
 (define lao-tzu-quotes
+  ; feeling enlightened
   (list (wise-quote "Be the chief but never the lord.")
         (wise-quote "Because of a great love, one is courageous.")
         (wise-quote "Simulated disorder postulates perfect discipline; simulated fear postulates courage; simulated weakness postulates strength.")
@@ -39,16 +41,25 @@
         (wise-quote "If the Great Way perishes there will morality and duty. When cleverness and knowledge arise great lies will flourish. When relatives fall out with one another there will be filial duty and love. When states are in confusion there will be faithful servants.")
         (wise-quote "To know yet to think that one does not know is best; Not to know yet to think that one knows will lead to difficulty.")))
 
+;; -----
+;; utils
+;; -----
 
 (define (random-title titles)
+  ; returns a random job title
   (define index (random (length titles)))
   (define selected-title (list-ref titles index))
   (title-t selected-title))
 
 (define (random-quote quotes)
+  ; returns a random quote
   (define index (random (length quotes)))
   (define selected-quote (list-ref quotes index))
   (wise-quote-q selected-quote))
+
+;; ----------------
+;; request handlers
+;; ----------------
 
 (define (handle-options req)
   (response/full
@@ -69,7 +80,7 @@
                                       (make-header
                                         #"Access-Control-Allow-Origin" #"*"))])
   (match (request-method r)
-    [(or "GET" "POST" "PUT" "DELETE")
+    [(or #"GET" #"POST" #"PUT" #"DELETE")
       (response/output
         (λ (op) (write-bytes t op))
           #:code c
@@ -77,7 +88,7 @@
           #:seconds (current-seconds)
           #:mime-type TEXT/HTML-MIME-TYPE
           #:headers h)]
-    ["OPTIONS"
+    [#"OPTIONS"
       (handle-options r)]))
 
 (define (health req)
