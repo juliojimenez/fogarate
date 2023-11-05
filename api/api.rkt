@@ -107,9 +107,21 @@
 
 (define-values (api-dispatch api-url)
     (dispatch-rules
-      [("") health]
-      [("title") get-title]
-      [("lao-tzu") get-lao-tzu]))
+      [("")
+       (lambda (req)
+        (match (request-method req)
+          [#"OPTIONS" (handle-options req)]
+          [#"GET" (health req)]))]
+      [("title")
+       (lambda (req)
+        (match (request-method req)
+          [#"OPTIONS" (handle-options req)]
+          [#"GET" (get-title req)]))]
+      [("lao-tzu")
+       (lambda (req)
+        (match (request-method req)
+          [#"OPTIONS" (handle-options req)]
+          [#"GET" (get-lao-tzu req)]))]))
 
 (serve/servlet
   api-dispatch
