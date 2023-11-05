@@ -68,7 +68,8 @@
     #:header (list
                (make-header #"Access-Control-Allow-Origin" #"*")
                (make-header #"Access-Control-Allow-Methods" #"GET, POST, PUT, DELETE, OPTIONS")
-               (make-header #"Access-Control-Allow-Headers" #"Content-Type, Authorization")
+               (make-header #"Access-Control-Allow-Headers" #"*")
+               (make-header #"Access-Control-Expose-Headers" #"*")
                (make-header #"Access-Control-Max-Age" #"86400")
                (make-header #"Content-Length" #"0"))))
 
@@ -81,7 +82,9 @@
                                         #"Access-Control-Allow-Origin" #"*")
                                       (make-header #"Access-Control-Allow-Methods" #"GET, POST, PUT, DELETE, OPTIONS")
                                       (make-header 
-                                        #"Access-Control-Allow-Headers" #"Content-Type, Authorization")
+                                        #"Access-Control-Allow-Headers" #"*")
+                                      (make-header 
+                                        #"Access-Control-Expose-Headers" #"*")
                                       (make-header 
                                         #"Access-Control-Max-Age" #"86400"))])
   (match (request-method r)
