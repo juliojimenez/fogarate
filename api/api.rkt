@@ -24,13 +24,15 @@
 ;; -----------------------------
 
 (define title-header
-  ; fun job titles
+  ; absurd job titles
   (list (title "Chief HTML Officer")
         (title "Remote Funnel Marketing Ninja")
         (title "Content Hero")
         (title "GIF Librarian")
         (title "Galactic Viceroy of Research Excellence")
-        (title "Innovation Sherpa")))
+        (title "Innovation Sherpa")
+        (title "Digital Prophet")
+        (title "Innovation Evangelist")))
 
 (define lao-tzu-quotes
   ; feeling enlightened
@@ -39,8 +41,10 @@
         (wise-quote "Simulated disorder postulates perfect discipline; simulated fear postulates courage; simulated weakness postulates strength.")
         (wise-quote "A scholar who cherishes the love of comfort is not fit to be deemed a scholar.")
         (wise-quote "If the Great Way perishes there will morality and duty. When cleverness and knowledge arise great lies will flourish. When relatives fall out with one another there will be filial duty and love. When states are in confusion there will be faithful servants.")
-        (wise-quote "To know yet to think that one does not know is best; Not to know yet to think that one knows will lead to difficulty.")))
-
+        (wise-quote "To know yet to think that one does not know is best; Not to know yet to think that one knows will lead to difficulty.")
+        (wise-quote "Heaven is long-enduring, and earth continues long. The reason why heaven and earth are able to endure and continue thus long is because they do not live of, or for, themselves.")
+        (wise-quote "He who talks more is sooner exhausted.")))
+        
 ;; -----
 ;; utils
 ;; -----
