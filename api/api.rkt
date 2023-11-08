@@ -32,7 +32,9 @@
         (title "Galactic Viceroy of Research Excellence")
         (title "Innovation Sherpa")
         (title "Digital Prophet")
-        (title "Innovation Evangelist")))
+        (title "Innovation Evangelist")
+        (title "Dream Alchemist")
+        (title "Time Mage")))
 
 (define lao-tzu-quotes
   ; feeling enlightened
@@ -43,7 +45,9 @@
         (wise-quote "If the Great Way perishes there will morality and duty. When cleverness and knowledge arise great lies will flourish. When relatives fall out with one another there will be filial duty and love. When states are in confusion there will be faithful servants.")
         (wise-quote "To know yet to think that one does not know is best; Not to know yet to think that one knows will lead to difficulty.")
         (wise-quote "Heaven is long-enduring, and earth continues long. The reason why heaven and earth are able to endure and continue thus long is because they do not live of, or for, themselves.")
-        (wise-quote "He who talks more is sooner exhausted.")))
+        (wise-quote "He who talks more is sooner exhausted.")
+        (wise-quote "One who is too insistent on his own views, finds few to agree with him.")
+        (wise-quote "Sincere words are not fine; fine words are not sincere.")))
         
 ;; -----
 ;; utils
