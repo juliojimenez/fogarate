@@ -1,3 +1,3 @@
 # fogaraté
 
-API backend for all my little web apps.
+HTMX Website with Racket API Backend.
