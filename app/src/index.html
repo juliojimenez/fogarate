@@ -28,10 +28,9 @@
                     </a>
                 </nav>
                 <div class="text-center"
-                     hx-on="htmx:configRequest: event.detail.headers=''; event.detail.headers['Content-Type']='text/html;charset=UTF-8'"
                      hx-get="/title"
                      hx-target="#title" hx-trigger="load"
-                     hx-swap="innerHTML">
+                     hx-swap="outerHTML">
                     <div class="flex justify-center mb-16">
                         <img src="assets/image/me.jpg" class="rounded-full" style="width: 256px;" alt="Image">
                     </div>
@@ -202,10 +201,9 @@
         <section class="py-10 md:py-16">
             <div class="container max-w-screen-xl mx-auto px-4">
                 <div class="text-center"
-                     hx-on="htmx:configRequest: event.detail.headers=''; event.detail.headers['Content-Type']='text/html;charset=UTF-8'"
                      hx-get="/lao-tzu"
                      hx-target="#lao-tzu" hx-trigger="load"
-                     hx-swap="innerHTML">
+                     hx-swap="outerHTML">
                     <h1 class="font-normal text-gray-300 text-3xl md:text-6xl lg:text-7xl" id="lao-tzu">&nbsp;</h1>
                     <p class="font-medium text-gray-400 text-xs md:text-base">
                         Lao Tzu

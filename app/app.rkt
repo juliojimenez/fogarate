@@ -37,7 +37,9 @@
         (title "Dream Alchemist")
         (title "Time Mage")
         (title "Innovation Alchemist")
-        (title "Senior Chaos Monkey")))
+        (title "Senior Chaos Monkey")
+        (title "Principal Bug Engineer")
+        (title "Software Ninjaneer Intern")))
 
 (define lao-tzu-quotes
   ; feeling enlightened
@@ -52,7 +54,9 @@
         (wise-quote "One who is too insistent on his own views, finds few to agree with him.")
         (wise-quote "Sincere words are not fine; fine words are not sincere.")
         (wise-quote "If you keep feeling a point that has been sharpened, the point cannot long preserve its sharpness.")
-        (wise-quote "Man takes his law from the Earth; the Earth takes its law from Heaven; Heaven takes its law from the Tao. The law of the Tao is its being what it is.")))
+        (wise-quote "Man takes his law from the Earth; the Earth takes its law from Heaven; Heaven takes its law from the Tao. The law of the Tao is its being what it is.")
+        (wise-quote "The people are hungry: It is because those in authority eat up too much in taxes.")
+        (wise-quote "The higher the sun ariseth, the less shadow doth he cast; even so the greater is the goodness, the less doth it covet praise; yet cannot avoid its rewards in honours.")))
         
 ;; -----
 ;; utils
@@ -74,27 +78,22 @@
 ;; request handlers
 ;; ----------------
 
-(define (resp/text #:request r
-                   #:text t 
-                   #:code [c 200]
-                   #:headers [h (list (make-header 
-                                        #"Content-Type" #"text/html;charset=utf-8"))])
-  (response/output
-    (λ (op) (write-bytes t op))
-      #:code c
-      #:message #"OK"
-      #:seconds (current-seconds)
-      #:mime-type TEXT/HTML-MIME-TYPE
-      #:headers h))
-
 (define (start req)
   (response/file "src/index.html"))
 
 (define (get-title req)
-  (resp/text #:request req #:text (string->bytes/utf-8 (random-title title-header))))
+  (response/xexpr
+    `(h1
+      ([class "font-normal text-gray-900 text-4xl md:text-7xl leading-none mb-8"]
+       [id "title"])
+      ,(random-title title-header))))
 
 (define (get-lao-tzu req)
-  (resp/text #:request req #:text (string->bytes/utf-8 (random-quote lao-tzu-quotes))))
+  (response/xexpr
+    `(h1
+      ([class "font-normal text-gray-300 text-3xl md:text-6xl lg:text-7xl"]
+       [id "lao-tzu"])
+      ,(random-quote lao-tzu-quotes))))
 
 (define-values (api-dispatch api-url)
     (dispatch-rules
