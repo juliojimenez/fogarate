@@ -43,7 +43,9 @@
         (title "Wizard of Light Bulb Moments")
         (title "Full Stack Magician")
         (title "Humbly Confident Product Designer")
-        (title "Dev Wrangler")))
+        (title "Dev Wrangler")
+        (title "Distinguished Pun Architect")
+        (title "Fellow Meme Engineer")))
 
 (define lao-tzu-quotes
   ; feeling enlightened
@@ -64,7 +66,8 @@
         (wise-quote "Simulated disorder postulates perfect discipline; simulated fear postulates courage; simulated weakness postulates strength.")
         (wise-quote "It is better to do one's own duty, however defective it may be, than to follow the duty of another, however well one may perform it. He who does his duty as his own nature reveals it, never sins.")
         (wise-quote "From wonder into wonder existence opens.")
-        (wise-quote "Nature is not human hearted.")))
+        (wise-quote "Nature is not human hearted.")
+        (wise-quote "He who obtains has little. He who scatters has much.")))
         
 ;; -----
 ;; utils
