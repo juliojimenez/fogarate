@@ -7,12 +7,11 @@
 ;; -------
 
 (require
+  helpful
   web-server/dispatch
   web-server/servlet-env
   web-server/http
-  web-server/http/response-structs
-  web-server/templates
-  response-ext)
+  web-server/templates)
 
 ;; data models
 
@@ -67,7 +66,8 @@
         (wise-quote "It is better to do one's own duty, however defective it may be, than to follow the duty of another, however well one may perform it. He who does his duty as his own nature reveals it, never sins.")
         (wise-quote "From wonder into wonder existence opens.")
         (wise-quote "Nature is not human hearted.")
-        (wise-quote "He who obtains has little. He who scatters has much.")))
+        (wise-quote "He who obtains has little. He who scatters has much.")
+        (wise-quote "Govern a great nation as you would cook a small fish. Do not overdo it.")))
         
 ;; -----
 ;; utils
