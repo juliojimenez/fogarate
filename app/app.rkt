@@ -10,12 +10,11 @@
   web-server/dispatch
   web-server/servlet-env
   web-server/http
+  web-server/http/response-structs
   web-server/templates
   response-ext)
 
-;; -----------
 ;; data models
-;; -----------
 
 (struct title (t) #:mutable)
 (struct wise-quote (q) #:mutable)
@@ -92,7 +91,7 @@
 
 (define (start req)
   (response/output
-    (λ (op) (display (include-template "src/index.html") op))))
+    (lambda (op) (display (include-template "src/index.html") op))))
 
 (define (get-title req)
   (response/xexpr
