@@ -10,6 +10,7 @@
   web-server/dispatch
   web-server/servlet-env
   web-server/http
+  web-server/templates
   response-ext)
 
 ;; -----------
@@ -90,7 +91,8 @@
 ;; ----------------
 
 (define (start req)
-  (response/file "src/index.html"))
+  (response/output
+    (λ (op) (display (include-template "src/index.html") op))))
 
 (define (get-title req)
   (response/xexpr
