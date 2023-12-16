@@ -67,7 +67,8 @@
         (wise-quote "From wonder into wonder existence opens.")
         (wise-quote "Nature is not human hearted.")
         (wise-quote "He who obtains has little. He who scatters has much.")
-        (wise-quote "Govern a great nation as you would cook a small fish. Do not overdo it.")))
+        (wise-quote "Govern a great nation as you would cook a small fish. Do not overdo it.")
+        (wise-quote "The power of intuitive understanding will protect you from harm until the end of your days.")))
         
 ;; -----
 ;; utils
