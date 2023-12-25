@@ -68,7 +68,8 @@
         (wise-quote "Nature is not human hearted.")
         (wise-quote "He who obtains has little. He who scatters has much.")
         (wise-quote "Govern a great nation as you would cook a small fish. Do not overdo it.")
-        (wise-quote "The power of intuitive understanding will protect you from harm until the end of your days.")))
+        (wise-quote "The power of intuitive understanding will protect you from harm until the end of your days.")
+        (wise-quote "Ambition has one heel nailed in well, though she stretch her fingers to touch the heavens."))
         
 ;; -----
 ;; utils
