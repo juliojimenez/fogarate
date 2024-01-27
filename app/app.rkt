@@ -70,7 +70,8 @@
         (wise-quote "Govern a great nation as you would cook a small fish. Do not overdo it.")
         (wise-quote "The power of intuitive understanding will protect you from harm until the end of your days.")
         (wise-quote "Ambition has one heel nailed in well, though she stretch her fingers to touch the heavens.")
-        (wise-quote "In the world there is nothing more submissive and weak than water. Yet for attacking that which is hard and strong nothing can surpass it.")))
+        (wise-quote "In the world there is nothing more submissive and weak than water. Yet for attacking that which is hard and strong nothing can surpass it.")
+        (wise-quote "The Tao that can be told is not the eternal Tao; the name that can be named is not the eternal name. The Nameless is the origin of Heaven and Earth; the Named is the mother of all things.")))
   
 ;; -----
 ;; utils
