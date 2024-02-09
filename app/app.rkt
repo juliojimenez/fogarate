@@ -97,7 +97,7 @@
 
 (define (start req)
   (response/output
-    (lambda (op) (display (include-template "src/index.html") op))))
+    (lambda (op) (display (include-template "src/layout.html") op))))
 
 (define (get-title req)
   (response/xexpr
