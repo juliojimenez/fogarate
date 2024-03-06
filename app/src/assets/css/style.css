@@ -1,0 +1,43 @@
+/* Terminal container */
+.terminal {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    padding: 10px;
+    width: 100%;
+    height: 400px;
+    overflow: auto;
+}
+
+/* Terminal prompt */
+.terminal::before {
+    content: '$';
+    color: #0f0;
+    display: block;
+}
+
+/* Terminal input/output */
+.terminal p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Terminal input */
+.terminal .input {
+    color: #0f0;
+}
+
+/* Terminal output */
+.terminal .output {
+    color: #fff;
+}
+
+/* Terminal command */
+.terminal .command {
+    color: #0af;
+}
+
+/* Terminal error */
+.terminal .error {
+    color: #f00;
+}
