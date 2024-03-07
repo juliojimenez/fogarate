@@ -4,9 +4,9 @@
         <title>Julio Jimenez | LispDev</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon" />
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/site.css" />
+        <link rel="shortcut icon" href="static/img/favicon.jpg" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="static/css/site.css" />
         <script
             src="https://unpkg.com/htmx.org@1.9.10"
             integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
@@ -14,6 +14,6 @@
         ></script>
     </head>
     <body>
-        <p>Hello</p>
+        {% block content %}{% endblock %}
     </body>
 </html>

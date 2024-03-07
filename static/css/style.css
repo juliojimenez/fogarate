@@ -1,43 +1,100 @@
-/* Terminal container */
-.terminal {
-    background-color: #000;
-    color: #fff;
+body {
     font-family: 'Courier New', monospace;
-    padding: 10px;
-    width: 100%;
-    height: 400px;
-    overflow: auto;
+    background-image: url('/static/img/spider.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #222;
+    background-attachment: fixed;
+    color: #fff;
 }
 
-/* Terminal prompt */
-.terminal::before {
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  /* padding: 10px; */
+}
+
+.terminal {
+  width: calc(33.333% - 20px);
+  border: 1px solid #222;
+  border-radius: 5px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
+  overflow: auto;
+}
+
+.terminal > .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  width: 100%;
+  height: 15%;
+  background-color: #3a3a3a;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* .prompts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: normal;
+} */
+
+.prompts .prompt {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* This ensures vertical alignment if needed */
+}
+
+.prompts .prompt::before {
     content: '$';
     color: #0f0;
-    display: block;
+    margin-right: 5px;
 }
 
-/* Terminal input/output */
-.terminal p {
+.prompts .prompt p {
     margin: 0;
     line-height: 1.5;
 }
 
-/* Terminal input */
-.terminal .input {
+.prompts > .prompt .input {
     color: #0f0;
 }
 
-/* Terminal output */
-.terminal .output {
+.prompts > .prompt .output {
     color: #fff;
 }
 
-/* Terminal command */
-.terminal .command {
+.prompts > .prompt .command {
     color: #0af;
 }
 
-/* Terminal error */
-.terminal .error {
+.prompts > .prompt .error {
     color: #f00;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .terminal {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
