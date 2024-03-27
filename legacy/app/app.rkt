@@ -130,3 +130,7 @@
   #:port 8080
   #:servlet-path ""
   #:servlet-regexp #rx"")
+
+
+; {"Sunset":"f6d8ae","Charcoal":"2e4057","Yale Blue":"083d77","Cerise":"da4167","Naples yellow":"f4d35e"}
+;

@@ -1,6 +1,9 @@
 body {
-    font-family: 'Courier New', monospace;
-    background-image: url('/static/img/spider.svg');
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    font-family: "Courier New", monospace;
+    background-image: url("/static/img/spider.svg");
     background-position: center center;
     background-repeat: no-repeat;
     background-color: #222;
@@ -9,92 +12,32 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  /* padding: 10px; */
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #422;
+    border-width: 1px;
+    border-style: solid;
 }
 
-.terminal {
-  width: calc(33.333% - 20px);
-  border: 1px solid #222;
-  border-radius: 5px;
-  height: 400px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  font-family: 'Courier New', monospace;
-  margin-bottom: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: normal;
-  align-items: normal;
-  overflow: auto;
+a {
+    color: #afa;
+    text-decoration: none;
 }
 
-.terminal > .title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  
-  width: 100%;
-  height: 15%;
-  background-color: #3a3a3a;
-  text-align: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-/* .prompts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: normal;
-} */
-
-.prompts .prompt {
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* This ensures vertical alignment if needed */
-}
-
-.prompts .prompt::before {
-    content: '$';
-    color: #0f0;
-    margin-right: 5px;
-}
-
-.prompts .prompt p {
-    margin: 0;
-    padding: 0;
-}
-
-.prompts > .prompt .input {
-    color: #0f0;
-}
-
-.prompts > .prompt .output {
-    color: #fff;
-}
-
-.prompts > .prompt .command {
-    color: #0af;
-}
-
-.prompts > .prompt .error {
-    color: #f00;
+a:hover {
+    color: #4f4;
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
-  .container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-  }
-
-  .terminal {
-    flex: 0 0 auto;
-    width: 100%;
-    margin-bottom: 20px;
-  }
+    body {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+    .container {
+        width: 100%;
+    }
 }

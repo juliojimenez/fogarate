@@ -1,14 +1,22 @@
 // Start typing-effect routines on document load
 // Author: Julio Jiménez
-document.addEventListener('DOMContentLoaded', function() {
-  addPromptToId("whoami", "name");
-  addPromptToId("projects", "ls-projects");
-  addPromptToId("quotes", "quote");
-  addPromptToId("random", "random-thing");
+document.addEventListener("DOMContentLoaded", function () {
+  // addPromptToId("whoami", "name");
+  // addPromptToId("projects", "ls-projects");
+  // addPromptToId("quotes", "quote");
+  // addPromptToId("random", "random-thing");
+  // typeEffect(document.getElementById("name"), "name", randomDelay());
+  // typeEffect(
+  //   document.getElementById("ls-projects"),
+  //   "projects list",
+  //   randomDelay(),
+  // );
+  // typeEffect(document.getElementById("quote"), "quote", randomDelay());
+  // typeEffect(document.getElementById("quote"), "quote", randomDelay());
 });
 
 function typeEffect(element, text, delay = 100) {
-  let i = 0; 
+  let i = 0;
   const typing = setInterval(() => {
     if (i < text.length) {
       element.innerHTML += text.charAt(i);
