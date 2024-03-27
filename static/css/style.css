@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    font-family: "Courier New", monospace;
+    background-image: url("/static/img/spider.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #222;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #422;
+    border-width: 1px;
+    border-style: solid;
+}
+
+a {
+    color: #afa;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4f4;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+    .container {
+        width: 100%;
+    }
+}

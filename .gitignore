@@ -5,3 +5,5 @@ compiled/
 *.bak
 \#*
 .\#*
+venv/
+.zed

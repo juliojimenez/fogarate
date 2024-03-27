@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Julio Jimenez - Programmer</title>
+        <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="assets/css/site.css">
+        <link rel="stylesheet" href="assets/css/tailwind.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@"@"400;500;600;700;800&display=swap"
+            rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
+            integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://unpkg.com/htmx.org@"@"1.9.6" integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" crossorigin="anonymous"></script>
+    </head>
+    <body class="bg-gray-100">
+        <section class="py-10 md:py-16">
+            <div class="container max-w-screen-xl mx-auto px-4">
+                <nav class="flex items-center justify-between mb-40">
+                    <img src="favicon.jpg" style="width: 56px;" alt="Logo">
+                    <a href="https://github.com/sponsors/juliojimenez" target="_blank"
+                        class="px-7 py-3 md:px-9 md:py-4 bg-white font-medium md:font-semibold text-gray-700 text-md rounded-md hover:bg-gray-700 hover:text-white transition ease-linear duration-500">
+                        Sponsor Me
+                    </a>
+                </nav>
+                <div class="text-center"
+                     hx-get="/title"
+                     hx-target="#title" hx-trigger="load"
+                     hx-swap="outerHTML">
+                    <div class="flex justify-center mb-16">
+                        <img src="assets/image/me.jpg" class="rounded-full" style="width: 256px;" alt="Image">
+                    </div>
+                    <h6 class="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8">Julio Jiménez</h6>
+                    <h1 class="font-normal text-gray-900 text-4xl md:text-7xl leading-none mb-8" id="title">&nbsp;</h1>
+                    <p class="font-normal text-gray-600 text-md md:text-xl mb-16">
+                        I love open source software. Almost as much as I love <a href="https://www.buymeacoffee.com/lispdev" target="_blank">coffee</a>.
+                    </p>
+                    <a href="https://github.com/sponsors/juliojimenez"
+                        class="px-7 py-3 md:px-9 md:py-4 font-medium md:font-semibold bg-gray-700 text-gray-50 text-sm rounded-md hover:bg-gray-50 hover:text-gray-700 transition ease-linear duration-500">
+                        Sponsor Me
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="py-10 md:py-16">
+            <div class="container max-w-screen-xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 px-8 py-10 rounded-md">
+                        <div class="w-20 py-6 flex justify-center bg-gray-100 rounded-md mb-4">
+                            <i data-feather="code"></i>
+                        </div>
+                        <h4 class="font-medium text-gray-700 text-lg mb-4">Programming</h4>
+                        <p class="font-normal text-gray-500 text-md">
+                            It's what I love to do for work, for fun, and sometimes even to relax. I've been doing it since the Dead Sea was just sick, and I don't think I'll ever stop. :-)
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 px-8 py-10 rounded-md">
+                        <div class="w-20 py-6 flex justify-center bg-gray-100 rounded-md mb-4">
+                            <i data-feather="shield"></i>
+                        </div>
+                        <h4 class="font-medium text-gray-700 text-lg mb-4">Security</h4>
+                        <p class="font-normal text-gray-500 text-md">
+                            Throughout my career, I've worked in Governance, Risk, and Compliance, Security Operations, Application Security, DevSecOps, and Cloud Security.
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 px-8 py-10 rounded-md">
+                        <div class="w-20 py-6 flex justify-center bg-gray-100 rounded-md mb-4">
+                            <i data-feather="coffee"></i>
+                        </div>
+                        <h4 class="font-medium text-gray-700 text-lg mb-4">C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub></h4>
+                        <p class="font-normal text-gray-500 text-md">
+                            At my keyboard, <a href="https://www.buymeacoffee.com/lispdev" target="_blank">coffee</a> is my co-pilot. It's like my trusty sidekick while I code. Java in the code, Java in the cup, except I hate Java. Cheers to endless lines of code and <a href="https://www.buymeacoffee.com/lispdev" target="_blank">coffee</a>! 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-10 md:py-16">
+            <div class="container max-w-screen-xl mx-auto px-4">
+                <div class="flex flex-col lg:flex-row justify-between">
+                    <div class="mb-10 lg:mb-0">
+                        <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Codefolio</h1>
+                        <p class="font-normal text-gray-500 text-xs md:text-base">
+                            Codey things that I have built.
+                        </p>
+                    </div>
+                    <div class="space-y-24">
+                        <div class="flex space-x-6">
+                            <h1 class="font-normal text-gray-700 text-3xl md:text-4xl">01</h1>
+                            <span class="w-28 h-0.5 bg-gray-300 mt-5"></span>
+                            <div>
+                                <h1 class="font-normal text-gray-700 text-3xl md:text-4xl mb-5"><a href="https://github.com/juliojimenez/clickhouse-cl" target="_blank">clickhouse-cl</a></h1>
+                                <p class="font-normal text-gray-500 text-sm md:text-base">
+                                    Common Lisp <a href="https://clickhouse.com" target="_blank">ClickHouse</a> Client Library.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex space-x-6">
+                            <h1 class="font-normal text-gray-700 text-3xl md:text-4xl">02</h1>
+                            <span class="w-28 h-0.5 bg-gray-300 mt-5"></span>
+                            <div>
+                                <h1 class="font-normal text-gray-700 text-3xl md:text-4xl mb-5"><a href="https://github.com/juliojimenez/hypermedia.systems" target="_blank">hypermedia.systems</a></h1>
+                                <p class="font-normal text-gray-500 text-sm md:text-base">
+                                    Examples from the book <a href="https://hypermedia.systems" target="_blank">Hypermedia Systems</a>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex space-x-6">
+                            <h1 class="font-normal text-gray-700 text-3xl md:text-4xl">03</h1>
+                            <span class="w-28 h-0.5 bg-gray-300 mt-5"></span>
+                            <div>
+                                <h1 class="font-normal text-gray-700 text-3xl md:text-4xl mb-5"><a href="https://github.com/juliojimenez/yamler" target="_blank">yamler</a></h1>
+                                <p class="font-normal text-gray-500 text-sm md:text-base">
+                                    <a href="https://github.com/marketplace/actions/yamler" target="_blank">GitHub Action</a> for parsing YAML documents<br />into GitHub Workflow output variables.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex space-x-6">
+                            <h1 class="font-normal text-gray-700 text-3xl md:text-4xl">04</h1>
+                            <span class="w-28 h-0.5 bg-gray-300 mt-5"></span>
+                            <div>
+                                <h1 class="font-normal text-gray-700 text-3xl md:text-4xl mb-5"><a href="https://github.com/juliojimenez/fogarate" target="_blank">fogaraté</a></h1>
+                                <p class="font-normal text-gray-500 text-sm md:text-base">
+                                    API used by this site.<br />Written in <a href="https://racket-lang.org" target="_blank">Racket</a> and <a href="https://htmx.org" target="_blank">HTMX</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-10 md:py-16">
+            <div class="container max-w-screen-xl mx-auto px-4">
+                <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Portfolio</h1>
+                <p class="font-normal text-gray-500 text-xs md:text-base mb-20">
+                    Design is not my thing. But here it is.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div style="background-image: url('assets/image/julio-sh.png'); min-height: 236px"class="bg-cover px-8 py-10 rounded-md">
+                        <h4 class="font-medium text-gray-700 text-lg mb-4"><a href="https://julio.sh" target="_blank">julio.sh</a></h4>
+                        <p class="font-normal text-gray-500 text-md mb-4">
+                            Literally, the site you're on right now.
+                        </p>
+                        <!-- <div class="relative">
+                            <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
+                            <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
+                        </div> -->
+                    </div>
+                    <!-- <div class="bg-gray-50 px-8 py-10 rounded-md">
+                        <h4 class="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h4>
+                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br>
+                            adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="relative">
+                            <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
+                            <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 px-8 py-10 rounded-md">
+                        <h4 class="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h4>
+                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br>
+                            adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="relative">
+                            <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
+                            <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 px-8 py-10 rounded-md">
+                        <h4 class="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h4>
+                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br>
+                            adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="relative">
+                            <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
+                            <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 px-8 py-10 rounded-md">
+                        <h4 class="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h4>
+                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br>
+                            adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="relative">
+                            <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
+                            <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 px-8 py-10 rounded-md">
+                        <h4 class="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h4>
+                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br>
+                            adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="relative">
+                            <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
+                            <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <section class="py-10 md:py-16">
+            <div class="container max-w-screen-xl mx-auto px-4">
+                <div class="text-center"
+                     hx-get="/lao-tzu"
+                     hx-target="#lao-tzu" hx-trigger="load"
+                     hx-swap="outerHTML">
+                    <h1 class="font-normal text-gray-300 text-3xl md:text-6xl lg:text-7xl" id="lao-tzu">&nbsp;</h1>
+                    <p class="font-medium text-gray-400 text-xs md:text-base">
+                        Lao Tzu
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="py-10 md:py-16">
+            <div class="container max-w-screen-xl mx-auto px-4">
+                <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Experience</h1>
+                <p class="font-normal text-gray-500 text-xs md:text-base mb-20">
+                    Where I've worked.
+                </p>
+                <div class="flex flex-col lg:flex-row justify-between">
+                    <div class="space-y-8 md:space-y-16 mb-16 md:mb-0">
+                        <h6 class="font-medium text-gray-400 text-base uppercase">Company</h6>
+                        <p class="font-semibold text-gray-600 text-base">
+                            ClickHouse <span class="font-normal text-gray-300">/ Remote</span>
+                        </p>
+                        <p class="font-semibold text-gray-600 text-base">
+                            VillageMD <span class="font-normal text-gray-300">/ Remote</span>
+                        </p>
+                        <p class="font-semibold text-gray-600 text-base">
+                            Rally Health <span class="font-normal text-gray-300">/ Washington DC, Remote</span>
+                        </p>
+                        <p class="font-semibold text-gray-600 text-base">
+                            Fayetteville State University <span class="font-normal text-gray-300">/ Fayetteville, NC</span>
+                        </p>
+                        <p class="font-semibold text-gray-600 text-base">
+                            North Carolina National Guard <span class="font-normal text-gray-300">/ Raleigh, NC</span>
+                        </p>
+                        <p class="font-semibold text-gray-600 text-base">
+                            US Army <span class="font-normal text-gray-300">/ Fort Bragg, NC</span>
+                        </p>
+                    </div>
+                    <div class="space-y-8 md:space-y-16 mb-16 md:mb-0">
+                        <h6 class="font-medium text-gray-400 text-base uppercase">Position</h6>
+                        <p class="font-normal text-gray-400 text-base">
+                            Cloud Infrastructure Security Lead
+                        </p>
+                        <p class="font-normal text-gray-400 text-base">
+                            Director of DevOps
+                        </p>
+                        <p class="font-normal text-gray-400 text-base">
+                            Senior Security Engineer
+                        </p>
+                        <p class="font-normal text-gray-400 text-base">
+                            Information Security Specialist
+                        </p>
+                        <p class="font-normal text-gray-400 text-base">
+                            Sergeant First Class
+                        </p>
+                        <p class="font-normal text-gray-400 text-base">
+                            Staff Sergeant
+                        </p>
+                    </div>
+                    <div class="space-y-8 md:space-y-16">
+                        <h6 class="font-medium text-gray-400 text-base uppercase">Year</h6>
+                        <p class="font-normal text-gray-400 text-base">2022</p>
+                        <p class="font-normal text-gray-400 text-base">2021</p>
+                        <p class="font-normal text-gray-400 text-base">2019</p>
+                        <p class="font-normal text-gray-400 text-base">2013</p>
+                        <p class="font-normal text-gray-400 text-base">2007</p>
+                        <p class="font-normal text-gray-400 text-base">2001</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="py-10 md:py-16">
+            <div class="container max-w-screen-xl mx-auto px-4">
+                <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Brands</h1>
+                <p class="font-normal text-gray-500 text-xs md:text-base mb-10 md:mb-20">Below is a summary of the places I
+                    studied</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <img src="assets/image/brand-1.png" alt="Image">
+                    <img src="assets/image/brand-2.png" alt="Image">
+                    <img src="assets/image/brand-3.png" alt="Image">
+                    <img src="assets/image/brand-4.png" alt="Image">
+                    <img src="assets/image/brand-5.png" alt="Image">
+                    <img src="assets/image/brand-6.png" alt="Image">
+                </div>
+            </div>
+        </section> -->
+        <!-- <section class="py-10 md:py-16">
+            <div class="container max-w-screen-xl mx-auto px-4">
+                <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Testimonial</h1>
+                <p class="font-normal text-gray-500 text-xs md:text-base mb-10 md:mb-20">Below is a summary of the places I
+                    studied</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 px-8 py-10 rounded-md">
+                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br>
+                            adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
+                        <h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span
+                                class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
+                    </div>
+                    <div class="bg-gray-50 px-8 py-10 rounded-md">
+                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br>
+                            adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
+                        <h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span
+                                class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
+                    </div>
+                    <div class="bg-gray-50 px-8 py-10 rounded-md">
+                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br>
+                            adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
+                        <h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span
+                                class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
+                    </div>
+                    <div class="bg-gray-50 px-8 py-10 rounded-md">
+                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br>
+                            adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
+                        <h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span
+                                class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
+                    </div>
+                    <div class="bg-gray-50 px-8 py-10 rounded-md">
+                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br>
+                            adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
+                        <h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span
+                                class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
+                    </div>
+                    <div class="bg-gray-50 px-8 py-10 rounded-md">
+                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br>
+                            adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
+                        <h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span
+                                class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <footer class="py-10 md:py-16 mb-20 md:mb-40 lg::mb-52">
+            <div class="container max-w-screen-xl mx-auto px-4">
+                <div class="text-center">
+                    <!-- <h1 class="font-medium text-gray-700 text-4xl md:text-5xl mb-5">Testimonial</h1>
+                    <p class="font-normal text-gray-400 text-md md:text-lg mb-20">
+                        I'm not currently taking on new client
+                        work but feel free to contact me for any <br> other inquiries.
+                    </p> -->
+                    <div class="flex items-center justify-center space-x-8">
+                        <a 
+                            href="https://x.com/lispdev"
+                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500"
+                            target="_blank">
+                            <i data-feather="twitter"
+                                class="text-gray-500 hover:text-gray-800 transition ease-in-out duration-500"></i>
+                        </a>
+                        <a 
+                            href="https://github.com/juliojimenez"
+                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500"
+                            target="_blank">
+                            <i data-feather="github"
+                                class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"></i>
+                        </a>
+                        <a 
+                            href="https://buymeacoffee.com/lispdev"
+                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500"
+                            target="_blank">
+                            <i data-feather="coffee"
+                                class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"></i>
+                        </a>
+                        <!-- <a href="#"
+                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
+                            <i data-feather="codepen"
+                                class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"></i>
+                        </a>
+                        <a href="#"
+                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
+                            <i data-feather="at-sign"
+                                class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"></i>
+                        </a>
+                        <a href="#"
+                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
+                            <i data-feather="instagram"
+                                class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"></i>
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            feather.replace()
+        </script>
+    </body>
+</html>
