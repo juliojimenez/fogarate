@@ -33,6 +33,34 @@ a:hover {
     text-decoration: none;
 }
 
+.beacon {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    flex-direction: column;
+    overflow-x: wrap;
+}
+
+.pre-container pre {
+    width: 490px;
+    white-space: pre-wrap; /* Allows the text to wrap */
+    word-wrap: normal; /* Ensures words do not break */
+    overflow-wrap: break-word; /* Helps to break long words */
+    font-size: 1.45em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 25px);
+  grid-template-rows: repeat(8, 25px);
+}
+
+.cell {
+  width: 25px;   /* Set the width of each cell */
+  height: 25px;  /* Set the height of each cell */
+  border: 1px solid #888888; /* Adds borders to the cells */
+}
+
 @media (max-width: 768px) {
     body {
         display: flex;
